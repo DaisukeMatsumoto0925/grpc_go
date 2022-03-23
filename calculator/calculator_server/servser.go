@@ -15,7 +15,7 @@ type server struct {
 }
 
 func (*server) Sum(ctx context.Context, req *calculatorpb.SumRequest) (*calculatorpb.SumResponse, error) {
-	fmt.Println("Received Sum RPC: %v", req)
+	fmt.Printf("Received Sum RPC: %v", req)
 	firstNumber := req.FirstNumber
 	secondNumber := req.SecondNumber
 	sum := firstNumber + secondNumber
